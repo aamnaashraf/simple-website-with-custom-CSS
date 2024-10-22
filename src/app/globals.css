@@ -1,0 +1,612 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/global.css */
+
+/* Apply a box-sizing border-box model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Basic CSS Reset */
+  html, body, div, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%; /* Use 100% of the default font size */
+    font: inherit;   /* Inherit font settings */
+  }
+  
+  /* Ensure full height and width */
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+
+  body {
+    background-image: url('/img 10.avif'); /* Add your image URL here */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    width:100vh;
+    height: 100vw; /* Ensures the background covers the full viewport height */
+    padding: 0; /* Adjust padding if necessary */
+    margin:0;
+  }
+  
+  /* Other global styles */
+ 
+  
+  /* Style for buttons */
+  button {
+    cursor: pointer;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    body {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+  }
+
+
+/* styles/Home.module.css */
+.container {
+   
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+  }
+  
+  .main {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 5rem;
+    color: #333;
+  }
+  
+  .description {
+    margin: 1.5rem 0;
+    font-size: 3rem;
+    color: rgb(26, 23, 23);
+    font-weight: 100;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .readMoreBtn, .joinNowBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .readMoreBtn {
+    background-color: #37c2bb; /* Light greenish button */
+    color: #fff;
+
+  }
+  
+  .joinNowBtn {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #37c2bb; /* Light green border */
+  }
+  
+
+  /* styles/global.css */
+
+/* Apply a box-sizing border-box model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Basic CSS Reset */
+  html, body, div, h1, h2, h3, p, ul, li, button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%; /* Use 100% of the default font size */
+    font: inherit;   /* Inherit font settings */
+  }
+  
+  /* Ensure full height and width */
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Space out logo and links */
+    align-items: center;            /* Center vertically */
+    background-color: rgb(219, 192, 210);       /* White background for navbar */
+    padding: 1rem 2rem;            /* Padding for the navbar */
+    position: fixed;             /* Relative positioning for child elements */
+    width: 100%;                   /* Full width */
+   left:0;
+   top:0;
+   right:0;
+   z-index:1000;
+  }
+  
+  .logo {
+    
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navLinks {
+    list-style: none;              /* Remove bullet points from list */
+    display: flex;                 /* Display links in a row */
+    gap: 2rem;                     /* Space between links */
+  }
+  
+  .navLinks li {
+    margin: 0;                     /* No margin on list items */
+  }
+  
+  .navLinks a {
+    text-decoration: none;          /* Remove underline from links */
+    color: #333;                   /* Dark text color */
+    font-weight: 600;              /* Semi-bold font weight */
+  }
+  
+  .navLinks a:hover {
+    color: #56b9ac;                /* Light greenish color on hover */
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack elements vertically */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .navLinks {
+      flex-direction: column; /* Stack links vertically */
+      gap: 1rem;              /* Adjust gap for stacked items */
+      margin-top: 1rem;       /* Add margin above the links */
+    }
+  }
+
+
+
+  /* About page styles */
+/* About Page Container */
+.about-container {
+    padding: 2rem;
+    background-color: #f0d7e6;
+    min-height: calc(100vh - 80px);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Section */
+  .about-header {
+    text-align: center;
+    background-image: url('/images/learning-bg.jpg'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    color: white;
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color:#7ed957
+  }
+  
+  .about-tagline {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color:#56b9ac
+  }
+  
+  /* Main Content Section */
+  .about-content {
+    text-align: center;
+    margin: 4rem 0;
+  }
+  
+  .about-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-content p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Features Section */
+  .about-features {
+    background-color: #b089cf;
+    padding: 3rem 2rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .feature-item {
+    background-color: #d5eca0;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-item p {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* Footer Section */
+  .about-footer {
+    text-align: center;
+    background-color: #7eb865;
+    padding: 2rem;
+    color: white;
+    margin-top: 2rem;
+  }
+
+
+
+ /* Courses Page Container */
+.courses-container {
+    padding: 2rem;
+    background-color: #ffffff;
+    min-height: calc(100vh - 80px);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header Section */
+  .courses-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .courses-header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Courses Grid */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .course-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .course-item:hover {
+    background-color: #37c2bb;
+  }
+  
+  .course-image {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+    border-color: #222;
+  }
+  
+  /* Updated background for course info box */
+  .course-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Soft white background */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Typography for course titles */
+  .course-info h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #222; /* Darker text for title */
+    font-weight: bold;
+  }
+  
+  /* Color matching the image */
+  .course-info p {
+    font-size: 1rem;
+    color: #92dbd8; /* Lighter gray for course count */
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  /* Styling for the Categories Heading */
+  .courses-header h1::before {
+    content: 'CATEGORIES';
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #22b2a3; /* Light greenish color matching the design */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  
+
+  .contact-page-container {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Adjust the heading section */
+.contact-details h2 {
+    font-size: 40px;
+    font-weight: 100;
+    color:rgb(13, 13, 14);
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 0; /* Ensures it's at the top */
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px; /* Added margin to give space between heading and content */
+}
+
+.info-block {
+    max-width: 40%;
+}
+
+.info-block h3 {
+    font-size: 34px;
+    color:#187383;
+    margin-bottom: 10px;
+}
+
+.info-block p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    color: #f2f7f8;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+    color: #1d1f1e;
+}
+
+.info-list li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.contact-form {
+    max-width: 55%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Newsletter section styling */
+.newsletter-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color:#eef1f1
+}
+
+.newsletter-section p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.btn-signup {
+    padding: 10px 20px;
+    background-color: #17a2b8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Footer Styling */
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #17a2b8;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  background-color: #17a2b8;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #138496;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+}
